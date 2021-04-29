@@ -22,9 +22,9 @@ public class NemIdAuthorizer {
     public static void askForCPR(){
         Scanner userInput = new Scanner(System.in);
         System.out.println("Enter username");
-        String cpr = userInput.nextLine();
+        String username = userInput.nextLine();
         System.out.println("Enter password");
         int password = userInput.nextInt();
-        isValidInput(cpr, password);
+        isValidInput(username, password);
     }
 }

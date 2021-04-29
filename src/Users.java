@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Users {
 
 
-    private String username;
-    private int password;
+    private final String username;
+    private final int password;
     private static ArrayList<Users> UserList;
 
         //Constructor
@@ -33,8 +33,8 @@ public class Users {
 
                 String[] lineAsArray = currentUser.split(",");
 
-                String username = lineAsArray[1].trim();
-                int password = Integer.parseInt(lineAsArray[0].trim());
+                String username = lineAsArray[0].trim();
+                int password = Integer.parseInt(lineAsArray[1].trim());
 
                 //Opretter et ny instance af ingrediensen
                 Users newUser = new Users(username, password);

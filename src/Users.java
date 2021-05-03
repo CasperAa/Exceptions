@@ -29,16 +29,14 @@ public class Users {
             while (fileScanner.hasNext()) {
 
                 String currentUser = fileScanner.nextLine();
-                //Split-method for at opdele linjen
-
+                //split method to split the data by ","
                 String[] lineAsArray = currentUser.split(",");
 
                 String username = lineAsArray[0].trim();
                 int password = Integer.parseInt(lineAsArray[1].trim());
 
-                //Opretter et ny instance af ingrediensen
                 Users newUser = new Users(username, password);
-                //Tilføjer den til ArrayListen
+                //Adds the new constructed user to the arraylist
                 UserList.add(newUser);
             }
         }

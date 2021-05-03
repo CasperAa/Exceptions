@@ -8,6 +8,7 @@ public class NemIdAuthorizer {
         askForCPR();
     }
 
+    //A try / catch, checks if user is in the list, trows exception if false
     public static void isValidInput(String username, int password){
         try{
             UserValidator validator = new UserValidator();
@@ -17,7 +18,7 @@ public class NemIdAuthorizer {
             throw new NoSuchUserException();
         }
     }
-
+    //Method ask for user input
     public static void askForCPR(){
         Scanner userInput = new Scanner(System.in);
         System.out.println("Enter username");

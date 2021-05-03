@@ -14,8 +14,7 @@ public class NemIdAuthorizer {
             validator.validateUser(username, password);
 
         } catch (InputMismatchException exception){
-            System.out.println("invalid input \nTry again:");
-            askForCPR();
+            throw new NoSuchUserException();
         }
     }
 
